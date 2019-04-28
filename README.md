@@ -48,7 +48,7 @@ const Debugging = require('better-debugging.js');
 const debug = new Debugging.BetterDebugging(options);
 ```
 options (`object`):
-```js
+```
 {
   archiveFolder (String): Folder to where logs should be saved, must be a direct link (Default: __dirname + '/archive'),
   debugEnabled (Boolean): Wether to log messages with type "Debug",
