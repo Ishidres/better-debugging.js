@@ -1,0 +1,14 @@
+# Folders
+archive/
+node_modules/
+
+# File Types
+.*
+*.txt
+*.sh
+
+# Specific Files
+package-lock.json
+
+# Include these files
+!.gitignore
