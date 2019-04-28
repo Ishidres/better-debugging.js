@@ -1,0 +1,21 @@
+{
+  "name": "better-debugging.js",
+  "version": "1.0.0",
+  "description": "An advanced but still easy to use debugging and logging tool.",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "debug",
+    "debugging",
+    "log",
+    "logging",
+    "tool"
+  ],
+  "author": "Ishidres (twitter.com/Ishidres)",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
