@@ -1,6 +1,6 @@
 {
   "name": "better-debugging.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An advanced but still easy to use debugging and logging tool.",
   "main": "js/index.js",
   "scripts": {
