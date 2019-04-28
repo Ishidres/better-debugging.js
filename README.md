@@ -10,8 +10,8 @@
 
 ## Usage
 ```js
-const BetterDebugging = require('better-debugging.js');
-const debug = new BetterDebugging();
+const Debugging = require('better-debugging.js');
+const debug = new Debugging.BetterDebugging();
 
 debug.log("Hello World!");
 // [INFO] [9.0 MB][2019-04-28T12:49:34.251Z]: Hello World!
@@ -20,8 +20,8 @@ debug.log("Hello World!");
 
 ## Example Usage
 ```js
-const BetterDebugging = require('better-debugging.js');
-const debug = new BetterDebugging({
+const Debugging = require('better-debugging.js');
+const debug = new Debugging.BetterDebugging({
   archiveFolder: '../archive/',
   debugEnabled: true,
   minPriority: 0,
@@ -44,7 +44,8 @@ debug.log("Also, the token will be hidden here if enabled in the options:"
 ## Docs
 #### Object Declaration
 ```js
-const debug = new BetterDebugging(options);
+const Debugging = require('better-debugging.js');
+const debug = new Debugging.BetterDebugging(options);
 ```
 options (`object`):
 ```js

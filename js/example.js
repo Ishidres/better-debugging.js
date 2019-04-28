@@ -1,5 +1,5 @@
-const BetterDebugging = require('./better-debugging.js');
-const debug = new BetterDebugging({
+const Debugging = require('./index.js');
+const debug = new Debugging.BetterDebugging({
   archiveFolder: '../archive/',
   debugEnabled: true,
   minPriority: 0,
