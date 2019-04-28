@@ -11,7 +11,7 @@ class BetterDebugging {
     this.hideTokens = options.hideTokens;
     this.spoofURLs = options.spoofURLs;
 
-    if (!this.archive) this.archive = './archive';
+    if (!this.archive) this.archive = __dirname + '/archive';
     if (!this.debugging) this.debugEnabled = false;
     if (!this.minPriority) this.minPriority = 0;
     if (!this.hideTokens) this.hideTokens = false;
@@ -21,23 +21,23 @@ class BetterDebugging {
     if (this.archive[this.archive.length-1] === '/')
       this.archive = this.archive.slice(0, this.archive.length-1);
 
-    if (!fs.existsSync(__dirname + '/' + this.archive))
-      fs.mkdirSync(__dirname + '/' + this.archive);
+    if (!fs.existsSync(this.archive))
+      fs.mkdirSync(this.archive);
 
-    if (!fs.existsSync(__dirname + '/' + this.archive + '/infos'))
-      fs.mkdirSync(__dirname + '/' + this.archive + '/infos');
+    if (!fs.existsSync(this.archive + '/infos'))
+      fs.mkdirSync(this.archive + '/infos');
    
-    if (!fs.existsSync(__dirname + '/' + this.archive + '/successes'))
-      fs.mkdirSync(__dirname + '/' + this.archive + '/successes');
+    if (!fs.existsSync(this.archive + '/successes'))
+      fs.mkdirSync(this.archive + '/successes');
     
-    if (!fs.existsSync(__dirname + '/' + this.archive + '/warnings'))
-      fs.mkdirSync(__dirname + '/' + this.archive + '/warnings');
+    if (!fs.existsSync(this.archive + '/warnings'))
+      fs.mkdirSync(this.archive + '/warnings');
     
-    if (!fs.existsSync(__dirname + '/' + this.archive + '/errors'))
-      fs.mkdirSync(__dirname + '/' + this.archive + '/errors');
+    if (!fs.existsSync(this.archive + '/errors'))
+      fs.mkdirSync(this.archive + '/errors');
     
-    if (!fs.existsSync(__dirname + '/' + this.archive + '/debugs'))
-      fs.mkdirSync(__dirname + '/' + this.archive + '/debugs');
+    if (!fs.existsSync(this.archive + '/debugs'))
+      fs.mkdirSync(this.archive + '/debugs');
   }
 
   log (message, type, priority) {

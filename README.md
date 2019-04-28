@@ -22,7 +22,7 @@ debug.log("Hello World!");
 ```js
 const Debugging = require('better-debugging.js');
 const debug = new Debugging.BetterDebugging({
-  archiveFolder: '../archive/',
+  archiveFolder: __dirname + '/../archive/',
   debugEnabled: true,
   minPriority: 0,
   hideTokens: false,
@@ -50,7 +50,7 @@ const debug = new Debugging.BetterDebugging(options);
 options (`object`):
 ```js
 {
-  archiveFolder (String): Folder to where logs should be saved (Default: './archive'),
+  archiveFolder (String): Folder to where logs should be saved, must be a direct link (Default: __dirname + '/archive'),
   debugEnabled (Boolean): Wether to log messages with type "Debug",
   minPriority (Integer): Messages with lower priority won't be logged to console, but will still be saved,
   hideTokens (Boolean): Wether to hide possible tokens in URLs,

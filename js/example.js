@@ -1,6 +1,6 @@
 const Debugging = require('./index.js');
 const debug = new Debugging.BetterDebugging({
-  archiveFolder: '../archive/',
+  archiveFolder: __dirname + '/../archive/',
   debugEnabled: true,
   minPriority: 0,
   hideTokens: false,
