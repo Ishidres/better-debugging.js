@@ -43,6 +43,7 @@ class BetterDebugging {
   log (message, type, priority) {
     var colorType = "";
     var resetType = "\x1b[0m";
+    let dateStr = new Date().toJSON().split("T")[0];
 
     var used_mem = (((process.memoryUsage().heapTotal) / 1024) / 1024);
     
@@ -95,28 +96,28 @@ class BetterDebugging {
     if (priority >= this.minPriority) {
       console.log(
         colorType + type_ + resetType
-        + " [" + used_mem + " MB][" + (new Date().toISOString()) + "]:"
+        + " [" + used_mem + " MB][" + (dateStr) + "]:"
         + colorType, message, resetType
       );
     }
     
-    var archiveDebug = "[" + used_mem + " MB][" + (new Date().toISOString()) + "]: " + message;
+    var archiveDebug = "[" + used_mem + " MB][" + (dateStr) + "]: " + message;
     var dateToday = new Date().toLocaleDateString();
 
     if (type === "i")
-      fs.appendFileSync(this.archive + '/infos/' + dateToday + '_(' + priority + ')' + '.txt', "[" + new Date().toISOString() + "]: " + archiveDebug + "\n");    
+      fs.appendFileSync(this.archive + '/infos/' + dateToday + '_(' + priority + ')' + '.txt', "[" + dateStr + "]: " + archiveDebug + "\n");    
 
     if (type === "s")
-      fs.appendFileSync(this.archive + '/successes/' + dateToday + '_(' + priority + ')' + '.txt', "[" + new Date().toISOString() + "]: " + archiveDebug + "\n");          
+      fs.appendFileSync(this.archive + '/successes/' + dateToday + '_(' + priority + ')' + '.txt', "[" + dateStr + "]: " + archiveDebug + "\n");          
 
     if (type === "w")
-      fs.appendFileSync(this.archive + '/warnings/' + dateToday + '_(' + priority + ')' + '.txt', "[" + new Date().toISOString() + "]: " + archiveDebug + "\n");    
+      fs.appendFileSync(this.archive + '/warnings/' + dateToday + '_(' + priority + ')' + '.txt', "[" + dateStr + "]: " + archiveDebug + "\n");    
 
     if (type === "e")
-      fs.appendFileSync(this.archive + '/errors/' + dateToday + '_(' + priority + ')' + '.txt', "[" + new Date().toISOString() + "]: " + archiveDebug + "\n");    
+      fs.appendFileSync(this.archive + '/errors/' + dateToday + '_(' + priority + ')' + '.txt', "[" + dateStr + "]: " + archiveDebug + "\n");    
 
     if (type === "d")
-      fs.appendFileSync(this.archive + '/debugs/' + dateToday + '_(' + priority + ')' + '.txt', "[" + new Date().toISOString() + "]: " + archiveDebug + "\n");    
+      fs.appendFileSync(this.archive + '/debugs/' + dateToday + '_(' + priority + ')' + '.txt', "[" + dateStr + "]: " + archiveDebug + "\n");    
   }
 
 }
