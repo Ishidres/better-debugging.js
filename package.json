@@ -3,6 +3,10 @@
   "version": "1.0.3",
   "description": "An advanced but still easy to use debugging and logging tool.",
   "main": "js/index.js",
+  "exports": {
+    "import": "./esm/index.mjs",
+    "require": "./js/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
